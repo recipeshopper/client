@@ -1,9 +1,12 @@
 import React from 'react';
-import SignInLanding from '../components/SignIn/SignInLanding.js';
+import { SignInLanding, SignInForm } from '../components/SignIn';
 
 const AuthLanding = () => {
   return (
+    <div className='wrapper'>
     <SignInLanding />
+    <SignInForm />
+    </div>
   )
 };
 
