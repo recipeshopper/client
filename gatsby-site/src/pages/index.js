@@ -1,19 +1,21 @@
 import React from 'react'
+import ReactDOM from 'react-dom';
 import { Link } from 'gatsby'
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { App } from './App';
+import { reducer } from '../components/reducers/reducer';
 
 import Layout from '../components/layout'
 import Image from '../components/image'
 
-const IndexPage = () => (
-  <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
-export default IndexPage
+ReactDOM.render(
+<Provider store={store}>
+    <App />
+</Provider>, document.getElementById('root')
+)
