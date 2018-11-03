@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SignInWrapper, Button } from '../Styles.js';
+import { SignInWrapper, Button } from '../styledComponents.js';
 
 
 
