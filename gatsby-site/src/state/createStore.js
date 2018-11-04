@@ -17,6 +17,8 @@ const initialState = { groceries: [ { amount: 2, ingredient: 'all-purpose flour'
   ingredient: 'semisweet chocolate chips',
   unit: 'cups' } ] }
 
+
+
 const reducer = (state=initialState, action) => {
   switch(action.type){
 
@@ -24,12 +26,7 @@ const reducer = (state=initialState, action) => {
       return Object.assign(
         {}, state, {
           groceries: [
-            ...state.groceries,
-              {
-                amount: action.quantity,
-                ingredient: action.item,
-                unit: action.unit,
-              }
+            ...state.groceries, action.payload
           ]
         }
       )
@@ -39,6 +36,15 @@ const reducer = (state=initialState, action) => {
           item => (item.ingredient !== action.payload)
         )
         return { groceries: deleteMap }
+    
+    case "UPDATE_QUANTITY":
+        const newArray = [...state.groceries]
+        const updatedArray = newArray.forEach(item=>{
+            if (item.ingredient === action.ingredient) {
+                return {...item, amount: action.payload}
+            } else {return item}
+        })
+        return { groceries: updatedArray }
 
     default:
       return state
