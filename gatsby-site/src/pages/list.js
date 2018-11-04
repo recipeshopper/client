@@ -1,24 +1,18 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import ListItem from '../components/ListItem';
+import { connect } from 'react-redux';
+import {deleter} from '../components/actions/actions'
 
 
-class ReviewList extends React.Component {
-    constructor(){
-        super();
-        this.state={
-            groceries: [ {item: "banana", quantity: 3}, {item: "orange", quantity: 1}, ]
-        }
-    }
-
-    render(){
+const ReviewList = (props) => {
         return(
             <div>
                 <h1>Recipe Shopper</h1>
                 <h3>Your Basket</h3>
                 <div className="item-list">
-                    {this.state.groceries.map(item =>{
-                        return <ListItem obj={item} key={Date.now()} />
+                    {props.groceries.map(item =>{
+                        return <ListItem key={item.ingredient} delete={()=>this.props.deleter(item.id)} id={item.id} amount={item.amount} grocery={item.ingredient} unit={item.unit} />
                     })}
                 </div>
                 <h1>Get your groceries</h1>
@@ -26,10 +20,11 @@ class ReviewList extends React.Component {
             </div>
         )
     }
-}
     
-//map the groceries array, each item.item is the <p> and item.quantity is the auto fill of the input
+const mapStateToProps = (state) => {
+    return {
+        groceries: state.groceries 
+    }
+}
 
-
-
-export default ReviewList;
+export default connect(mapStateToProps, {deleter})(ReviewList);
