@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SignInWrapper, Form, Input, Button } from '../styledComponents.js';
+import { SignInWrapper, SubHeader, Form, Input, Button } from '../styledComponents.js';
 
 class SignInForm extends Component {
   constructor(props){
@@ -39,7 +39,7 @@ class SignInForm extends Component {
         <Form signIn='true' onSubmit={this.handleSubmit}>
         <h2>
           {this.props.newUser ? 'Welcome! Please create a username and password' : 'Welcome back! Please login'}
-        </h2>
+        </SubHeader>
           <Input
           type='text'
           name='username'

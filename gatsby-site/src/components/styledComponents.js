@@ -4,21 +4,30 @@ import styled from 'styled-components';
 export const Header = styled.h1 `
   text-align: center;
   margin: 0 auto;
+  font-size: 60px;
+  padding-top: 40px;
 `;
 
 export const SubHeader = styled.h3 `
-  text-align: center;
+  text-align: left;
   margin: 0 auto; 
+  margin-left: 15%;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  font-size: 30px;
 `;
 
 export const Wrapper = styled.div `
 margin: 0 auto;
+margin-bottom: -30px;
 width: 100%;
 text-align: center;
 `;
+
 export const SignInWrapper = styled.div `
-  background: #222;
-  color: tomato;
+  background: #3AAFA9;
+  color: #02172c;
+  margin-top: 30px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -35,7 +44,6 @@ export const Form = styled.form `
   width: 95%;
   margin: 0 auto;
   padding: 2%;
-  border: ${props => props.add ? '1px solid black' : null};
   display: flex;
   flex-direction: ${props => props.signIn ? 'column' : 'row'};
   align-items: ${props => props.list ? 'flex-start' : 'center'};
@@ -46,13 +54,14 @@ export const Form = styled.form `
 export const Input = styled.input `
 background: white;
 color: #222;
-width: ${props=> props.list ? '20%' : '50%'};
+width: ${props=> props.list ? '10%' : '30%'};
 min-width: 80px;
 text-align: center;
-border-radius: 3px;
-border: 1px solid tomato;
+border-radius: 10px;
+border: 2px solid #335461;
 margin: 3%;
 padding: 10px;
+background-color: rgb(228, 228, 228);
 
 &:focus {
   outline: none;
@@ -61,23 +70,41 @@ padding: 10px;
 
 export const Label = styled.label `
   color: #222;
-  background: white;
-  border: ${props => props.add ? '1px solid black' : '1px solid tomato'};
-  border-radius: 3px;
+  background: #3AAFA9;
+  border-bottom: ${props => props.add ? '1px solid black' : '2px solid #2B7A78'};
   width: ${props => props.add ? '30%' : '80%'}
-  padding: 10px;
+  padding: 5px 20px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+
+  &:hover{
+    background: #349C97;
+  }
+`;
+
+export const AddLabel = styled.label `
+  color: #222;
+  background: #3AAFA9;
+  // border-bottom: ${props => props.add ? '1px solid black' : '2px solid #2B7A78'};
+  width: ${props => props.add ? '30%' : '80%'}
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  &:hover{
+    background: #349C97;
+  }
 `;
 
 export const Button = styled.button `
-  background: #222;
-  color: tomato;
+  background: #2B7A78;
+  border: 2px solid #2B7A78;
   font-size: 1em;
   margin: 1em;
   padding: 10px;
-  border: 1px solid tomato;
+  margin-top: 20px;
   border-radius: 3px;
   cursor: pointer;
   width: 40%;
@@ -85,7 +112,8 @@ export const Button = styled.button `
     outline: none;
   }
   &:hover {
-    background: tomato;
+    background: #349C97;
+    border: 2px solid #2B7A78;
     color: #222;
   }
 `;
@@ -94,4 +122,9 @@ export const Button = styled.button `
 export const DeleteSpan = styled.span `
   margin-left: 5%;
   cursor: pointer;
+  color: #02172c;
+
+  &:hover {
+    color: white;
+  }
 `;

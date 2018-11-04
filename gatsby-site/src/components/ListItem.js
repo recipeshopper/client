@@ -14,9 +14,10 @@ const ListItem = (props) => {
                     <Input list='true' type="number" defaultValue={props.amount} onChange={input}
                       step='0.5'
                       min='0'/>
+                     {props.unit && <p>{props.unit}</p>}
                     <p>{props.ingredient}</p>
                     <DeleteSpan onClick={props.delete}>X</DeleteSpan>
-                    <Note>current state: {props.amount}</Note>
+                    {/* <Note>current state: {props.amount}</Note> */}
                     </Label>
                 </Form>
             </Wrapper>
