@@ -1,6 +1,0 @@
-
-[build]
-
-base = "./gatsby-site"
-publish = "./gatsby-site/public"
-command = "gatsby-build"
