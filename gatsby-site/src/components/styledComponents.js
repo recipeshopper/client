@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 
 
+export const Header = styled.h1 `
+  text-align: center;
+  margin: 0 auto;
+`;
+
+export const SubHeader = styled.h3 `
+  text-align: center;
+  margin: 0 auto; 
+`;
+
 export const Wrapper = styled.div `
 margin: 0 auto;
 width: 100%;
@@ -24,19 +34,20 @@ export const Note = styled.p `
 export const Form = styled.form `
   width: 95%;
   margin: 0 auto;
-  padding: 5%;
+  padding: 2%;
   border: ${props => props.add ? '1px solid black' : null};
   display: flex;
   flex-direction: ${props => props.signIn ? 'column' : 'row'};
   align-items: ${props => props.list ? 'flex-start' : 'center'};
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
 `;
 
 export const Input = styled.input `
 background: white;
 color: #222;
-width: ${props=> props.list ? '15%' : '50%'};
+width: ${props=> props.list ? '20%' : '50%'};
+min-width: 80px;
 text-align: center;
 border-radius: 3px;
 border: 1px solid tomato;
