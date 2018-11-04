@@ -99,7 +99,7 @@ export const AddLabel = styled.label `
 `;
 
 export const Button = styled.button `
-  background: #2B7A78;
+  background: rgb(131, 226, 202);
   border: 2px solid #2B7A78;
   font-size: 1em;
   margin: 1em;
@@ -113,7 +113,7 @@ export const Button = styled.button `
   }
   &:hover {
     background: #349C97;
-    border: 2px solid #2B7A78;
+    border: 2px solid rgb(131, 226, 202);
     color: #222;
   }
 `;
