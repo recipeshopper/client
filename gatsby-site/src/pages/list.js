@@ -2,25 +2,42 @@ import React from 'react'
 import { Link } from 'gatsby'
 import ListItem from '../components/ListItem';
 import { connect } from 'react-redux';
-import {deleter} from '../components/actions/actions'
+import {deleter, quantityUpdate } from '../components/actions/actions'
+import AddForm from '../components/AddForm';
 
 
-const ReviewList = props => {
-    console.log(props.groceries)
+class ReviewList extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            quantity: ''
+        }
+    }
+
+    inputHandler = (ingredient, value) => {
+        this.setState({
+            quantity: value
+        }, function(){console.log('new', this.state.quantity)}) 
+        this.props.quantityUpdate(ingredient, value);
+    }
+
+    render(){
         return(
             <div>
                 <h1>Recipe Shopper</h1>
                 <h3>Your Basket</h3>
+                <h3>Forget something?</h3>
+                <AddForm />
                 <div className="item-list">
-                {props.groceries.map(item=>{
-                    return <ListItem key={item.ingredient} ingredient={item.ingredient} amount={item.amount} />
+                {this.props.groceries.map(item=>{
+                    return <ListItem key={item.ingredient} inputHandler={this.inputHandler} ingredient={item.ingredient} amount={item.amount} delete={()=> this.props.deleter(item.ingredient)} />
                 })}
-                Fake list 
                 </div>
                 <h1>Get your groceries</h1>
                 <Link to="/checkout">Checkout</Link>
             </div>
         )
+        }
     }
     
 const mapStateToProps = (state) => {
@@ -29,4 +46,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {deleter})(ReviewList);
+export default connect(mapStateToProps, {deleter, quantityUpdate})(ReviewList);

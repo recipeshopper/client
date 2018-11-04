@@ -1,15 +1,20 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Form, Input } from './styledComponents';
 
 const ListItem = (props) => {
+    const input = (e) => {
+        console.log(e.target.value)
+        props.inputHandler(props.ingredient, e.target.value)
+    }
+
         return(
             <div>
                 <Form> 
                     <label> 
-                    <Input type="number" defaultValue={props.amount}></Input>
+                    <Input type="number" defaultValue={props.amount} onChange={input}></Input>
                     {props.ingredient}
-                    <span onClick={props.deleter}>X</span>
+                    <h2>current state: {props.amount}</h2>
+                    <span onClick={props.delete}>X</span>
                     </label>
                 </Form>
             </div>
