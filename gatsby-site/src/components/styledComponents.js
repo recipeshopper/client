@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div `
 margin: 0 auto;
-width: 90%; 
+width: 90%;
 `;
 export const SignInWrapper = styled.div `
   background: #222;
@@ -44,6 +44,7 @@ export const Label = styled.label `
   border: 1px solid tomato;
   border-radius: 3px;
   width: 80%;
+  margin: 0; 
 `;
 
 export const Button = styled.button `
