@@ -54,7 +54,6 @@ const reducer = (state=initialState, action) => {
           }
         });
 
-        console.log('newArray after', newArr)
         return {
           groceries: newArr
         }

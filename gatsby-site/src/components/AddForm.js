@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { addItem } from '../components/actions/actions'
+import { addItem } from '../components/actions/actions';
+import { Form, Input, Button, Label } from './styledComponents';
 
 
 class AddForm extends React.Component{
@@ -31,21 +32,21 @@ class AddForm extends React.Component{
 
     render(){
         return(
-            <form onSubmit={this.submit} >
-                <label> Ingredient
-                    <input onChange={this.handleChange} name="ingredient" type="text" placeholder="ingredient" value={this.state.ingredient}>
-                    </input>
-                </label>
-                <label>Amount
-                    <input onChange={this.handleChange} name="amount" type="number" value={this.state.amount}>
-                    </input>
-                </label>
-                <label>Unit
-                    <input onChange={this.handleChange} name="unit" type="text" placeholder="Unit" value={this.state.unit}>
-                    </input>
-                </label>
-                <button>Add Item</button>
-            </form>
+            <Form onSubmit={this.submit} add='true' >
+                <Label add='true'> Ingredient
+                    <Input onChange={this.handleChange} name="ingredient" type="text" placeholder="ingredient" value={this.state.ingredient}>
+                    </Input>
+                </Label>
+                <Label add='true'>Amount
+                    <Input onChange={this.handleChange} name="amount" type="number" value={this.state.amount}>
+                    </Input>
+                </Label>
+                <Label add='true'>Unit
+                    <Input onChange={this.handleChange} name="unit" type="text" placeholder="Unit" value={this.state.unit}>
+                    </Input>
+                </Label>
+                <Button>Add Item</Button>
+            </Form>
         )
         }
     }

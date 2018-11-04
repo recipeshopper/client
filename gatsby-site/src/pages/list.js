@@ -17,7 +17,7 @@ class ReviewList extends React.Component{
     inputHandler = (ingredient, value) => {
         this.setState({
             quantity: value
-        }, function(){console.log('new', this.state.quantity)})
+        })
         this.props.quantityUpdate(ingredient, value);
     }
 
@@ -30,7 +30,7 @@ class ReviewList extends React.Component{
                 <AddForm />
                 <div className="item-list">
                 {this.props.groceries.map(item=>{
-                    return <ListItem key={item.ingredient} inputHandler={this.inputHandler} ingredient={item.ingredient} amount={item.amount} delete={()=> this.props.deleter(item.ingredient)} />
+                    return <ListItem key={item.ingredient} inputHandler={this.inputHandler} unit={item.unit} ingredient={item.ingredient} amount={item.amount} delete={()=> this.props.deleter(item.ingredient)} />
                 })}
                 </div>
                 <h1>Get your groceries</h1>
