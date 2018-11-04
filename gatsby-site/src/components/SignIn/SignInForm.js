@@ -9,7 +9,7 @@ class SignInForm extends Component {
   render() {
     return (
       <SignInWrapper>
-        <Form>
+        <Form signIn='true'>
         <h2>
           {this.props.newUser ? 'Welcome! Please create a username and password' : 'Welcome back! Please login'}
         </h2>

@@ -1,18 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Form, Input } from './styledComponents';
+import { Form, Input, Label, DeleteSpan, Wrapper } from './styledComponents';
 
 const ListItem = (props) => {
         return(
-            <div>
-                <Form> 
-                    <label> 
-                    <Input type="number" defaultValue={props.amount}></Input>
+            <Wrapper>
+                <Form>
+                    <Label>
+                    <Input list='true' type="number" defaultValue={props.amount}></Input>
                     {props.ingredient}
-                    <span onClick={props.deleter}>X</span>
-                    </label>
+                    <DeleteSpan onClick={props.deleter}>X</DeleteSpan>
+                    </Label>
                 </Form>
-            </div>
+            </Wrapper>
         )
     }
 

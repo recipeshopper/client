@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+
+export const Wrapper = styled.div `
+margin: 0 auto;
+width: 90%; 
+`;
 export const SignInWrapper = styled.div `
   background: #222;
   color: tomato;
@@ -15,17 +20,30 @@ export const Form = styled.form `
   padding: 5%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: ${props => props.signIn ? 'center' : 'flex-start'};
 `;
 
 export const Input = styled.input `
 background: white;
 color: #222;
-width: 50%;
+width: ${props=> props.list ? '20%' : '50%'};
+text-align: center;
 border-radius: 3px;
 border: 1px solid tomato;
 margin: 3%;
 padding: 10px;
+
+&:focus {
+  outline: none;
+}
+`;
+
+export const Label = styled.label `
+  color: tomato;
+  background: white;
+  border: 1px solid tomato;
+  border-radius: 3px;
+  width: 80%;
 `;
 
 export const Button = styled.button `
@@ -45,4 +63,9 @@ export const Button = styled.button `
     background: tomato;
     color: #222;
   }
+`;
+
+
+export const DeleteSpan = styled.span `
+  margin-left: 5%;
 `;
