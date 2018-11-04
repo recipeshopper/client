@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input } from './styledComponents';
+import { Form, Input, Wrapper, Label, DeleteSpan, Note } from './styledComponents';
 
 const ListItem = (props) => {
     const input = (e) => {
@@ -8,16 +8,18 @@ const ListItem = (props) => {
     }
 
         return(
-            <div>
-                <Form> 
-                    <label> 
-                    <Input type="number" defaultValue={props.amount} onChange={input}></Input>
-                    {props.ingredient}
-                    <h2>current state: {props.amount}</h2>
-                    <span onClick={props.delete}>X</span>
-                    </label>
+            <Wrapper>
+                <Form list='true'>
+                    <Label >
+                    <Input list='true' type="number" defaultValue={props.amount} onChange={input}
+                      step='0.5'
+                      min='0'/>
+                    <p>{props.ingredient}</p>
+                    <DeleteSpan onClick={props.delete}>X</DeleteSpan>
+                    <Note>current state: {props.amount}</Note>
+                    </Label>
                 </Form>
-            </div>
+            </Wrapper>
         )
     }
 

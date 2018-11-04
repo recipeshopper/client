@@ -1,4 +1,9 @@
 import { createStore as reduxCreateStore } from "redux"
+import {
+  ADD_ITEM,
+  DELETE_ITEM,
+  UPDATE_QUANTITY,
+} from '../components/actions/actions';
 
 const initialState = { groceries: [ { amount: 2, ingredient: 'all-purpose flour', unit: 'cups' },
 { amount: 0.5, ingredient: 'baking soda', unit: 'teaspoon' },
@@ -23,28 +28,35 @@ const reducer = (state=initialState, action) => {
   switch(action.type){
 
     case "ADD_ITEM":
-      return Object.assign(
-        {}, state, {
-          groceries: [
-            ...state.groceries, action.payload
-          ]
-        }
-      )
+    return {
+      ...state,
+      groceries: [
+        ...state.groceries, action.payload
+      ]
+    }
+
 
     case "DELETE_ITEM":
         const deleteMap = state.groceries.filter(
           item => (item.ingredient !== action.payload)
         )
         return { groceries: deleteMap }
-    
+
     case "UPDATE_QUANTITY":
-        const newArray = [...state.groceries]
-        const updatedArray = newArray.forEach(item=>{
-            if (item.ingredient === action.ingredient) {
-                return {...item, amount: action.payload}
-            } else {return item}
-        })
-        return { groceries: updatedArray }
+        let newArr = state.groceries.map(item => {
+          if (item.ingredient === action.ingredient) {
+            return {
+              ...item,
+              amount: action.payload
+            }
+          } else {
+            return item
+          }
+        });
+
+        return {
+          groceries: newArr
+        }
 
     default:
       return state

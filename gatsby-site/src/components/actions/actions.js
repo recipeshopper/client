@@ -23,6 +23,6 @@ export const quantityUpdate = (ingredient, quantity) => {
     return {
         type: UPDATE_QUANTITY,
         payload: quantity,
-        ingredient: ingredient
+        ingredient: ingredient,
     }
 }
