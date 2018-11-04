@@ -5,7 +5,9 @@ import {
   UPDATE_QUANTITY,
 } from '../components/actions/actions';
 
-const initialState = { groceries: [ { amount: 2, ingredient: 'all-purpose flour', unit: 'cups' },
+const initialState = {
+  isLoggedIn: false,
+  groceries: [ { amount: 2, ingredient: 'all-purpose flour', unit: 'cups' },
 { amount: 0.5, ingredient: 'baking soda', unit: 'teaspoon' },
 { amount: 0.5, ingredient: 'salt', unit: 'teaspoon' },
 { amount: 4.5,
@@ -57,6 +59,18 @@ const reducer = (state=initialState, action) => {
         return {
           groceries: newArr
         }
+
+    case 'LOGIN':
+    return {
+      ...state,
+      isLoggedIn: true,
+    }
+
+    case 'SIGNUP':
+    return {
+      ...state,
+      isLoggedIn: true,
+    }
 
     default:
       return state
