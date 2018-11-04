@@ -3,10 +3,10 @@ const preferDefault = m => m && m.default || m
 
 
 exports.components = {
-  "component---cache-dev-404-page-js": preferDefault(require("/mnt/c/Users/rolan/project/recepishop/client/.cache/dev-404-page.js")),
-  "component---src-pages-404-js": preferDefault(require("/mnt/c/Users/rolan/project/recepishop/client/src/pages/404.js")),
-  "component---src-pages-checkout-js": preferDefault(require("/mnt/c/Users/rolan/project/recepishop/client/src/pages/checkout.js")),
-  "component---src-pages-index-js": preferDefault(require("/mnt/c/Users/rolan/project/recepishop/client/src/pages/index.js")),
-  "component---src-pages-list-js": preferDefault(require("/mnt/c/Users/rolan/project/recepishop/client/src/pages/list.js"))
+  "component---cache-dev-404-page-js": preferDefault(require("/mnt/c/Users/rolan/hackathon/fix/.cache/dev-404-page.js")),
+  "component---src-pages-404-js": preferDefault(require("/mnt/c/Users/rolan/hackathon/fix/src/pages/404.js")),
+  "component---src-pages-auth-js": preferDefault(require("/mnt/c/Users/rolan/hackathon/fix/src/pages/auth.js")),
+  "component---src-pages-cart-js": preferDefault(require("/mnt/c/Users/rolan/hackathon/fix/src/pages/cart.js")),
+  "component---src-pages-index-js": preferDefault(require("/mnt/c/Users/rolan/hackathon/fix/src/pages/index.js"))
 }
 

@@ -1,22 +1,15 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, Route } from 'gatsby'
 
-class IndexPage extends React.Component{
-  constructor(){
-    super();
-    this.state={
-      groceries: []
-    }
-  }
+import Layout from '../components/layout'
 
-  render(){
-    return(
-      <div>
-          <h1>Get your groceries</h1>
-          <Link to="/list">Login</Link>
-      </div>
-    )
-  }
+
+const IndexPage = () => {
+  return(
+    <Layout>
+      <link to='/cart'>Login</link> 
+    </Layout>
+  )
 }
 
 

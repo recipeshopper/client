@@ -4,8 +4,6 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "dotenv": "^6.1.0",
-    "faunadb": "^2.5.2",
     "gatsby": "^2.0.19",
     "gatsby-image": "^2.0.15",
     "gatsby-plugin-manifest": "^2.0.5",
@@ -14,12 +12,12 @@
     "gatsby-plugin-sharp": "^2.0.7",
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-transformer-sharp": "^2.1.4",
-    "react": "^16.5.1",
+    "react": "^16.6.0",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-redux": "^5.1.0",
-    "recipe": "^0.1.2",
     "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "styled-components": "^4.0.3"
   },
   "keywords": [
