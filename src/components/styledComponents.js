@@ -26,6 +26,7 @@ text-align: center;
 
 export const SignInWrapper = styled.div `
   background: #3AAFA9;
+  height: 100vh;
   color: #02172c;
   margin-top: 30px;
   width: 100%;

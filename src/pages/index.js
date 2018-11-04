@@ -4,6 +4,7 @@ import { PrivateRoute } from 'gatsby';
 import { login, signUp } from '../components/actions/actions';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import '../components/layout.css';
 
 class IndexPage extends React.Component {
   constructor(props){
