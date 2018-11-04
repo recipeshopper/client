@@ -4484,6 +4484,11 @@ form-data@~2.3.2:
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
 
+formatter@0.1.x:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/formatter/-/formatter-0.1.8.tgz#149449fcc81d490896368590c2e57824673300c7"
+  integrity sha1-FJRJ/MgdSQiWNoWQwuV4JGczAMc=
+
 forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
@@ -8583,6 +8588,13 @@ readdirp@^2.0.0:
     graceful-fs "^4.1.11"
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
+
+recipe@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/recipe/-/recipe-0.1.2.tgz#e8ed34ef23048ca7de549c2b70e9d880b4a91fd5"
+  integrity sha1-6O007yMEjKfeVJwrcOnYgLSpH9U=
+  dependencies:
+    formatter "0.1.x"
 
 recursive-readdir@2.2.1:
   version "2.2.1"
