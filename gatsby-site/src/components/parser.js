@@ -1,5 +1,7 @@
 var parser = require('ingredients-parser');
 
+console.log('PARSER LOADED');
+
 let getIngredients = () => {
 	let ingrArr = [];
 	let temp = document.getElementsByClassName("recipe-ingred_txt");
