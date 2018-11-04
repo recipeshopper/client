@@ -4,7 +4,7 @@ import ListItem from '../components/ListItem';
 import { connect } from 'react-redux';
 import {deleter, quantityUpdate } from '../components/actions/actions'
 import AddForm from '../components/AddForm';
-import { Header, SubHeader, Button, Wrapper } from '../components/styledComponents';
+import { Header, ListSubHeader, Button, Wrapper } from '../components/styledComponents';
 
 
 class ReviewList extends React.Component{
@@ -26,13 +26,13 @@ class ReviewList extends React.Component{
         return(
             <Wrapper>
                 <Header>Recipe Shopper</Header>
-              <SubHeader>Your Basket</SubHeader>
+              <ListSubHeader>Your Basket</ListSubHeader>
                 <div className="item-list">
                 {this.props.groceries.map(item=>{
                     return <ListItem key={item.ingredient} inputHandler={this.inputHandler} unit={item.unit} ingredient={item.ingredient} amount={item.amount} delete={()=> this.props.deleter(item.ingredient)} />
                 })}
                 </div>
-                <SubHeader>Forget something?</SubHeader>
+                <ListSubHeader>Forget something?</ListSubHeader>
                     <AddForm />
                   <Header>Get your groceries</Header>
                 <Link to="/checkout">

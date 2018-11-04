@@ -8,10 +8,18 @@ export const Header = styled.h1 `
   padding-top: 40px;
 `;
 
-export const SubHeader = styled.h3 `
+export const ListSubHeader = styled.h3 `
   text-align: left;
   margin: 0 auto; 
   margin-left: 15%;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  font-size: 30px;
+`;
+
+export const SubHeader = styled.h3 `
+  text-align: center;
+  margin: 0 auto; 
   padding-top: 70px;
   padding-bottom: 20px;
   font-size: 30px;
