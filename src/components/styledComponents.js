@@ -32,6 +32,12 @@ width: 100%;
 text-align: center;
 `;
 
+export const FauxWrapper = styled.div `
+margin: 0 auto;
+margin-bottom: -30px;
+width: 100%;
+`;
+
 export const SignInWrapper = styled.div `
   background: #3AAFA9;
   color: #02172c;
