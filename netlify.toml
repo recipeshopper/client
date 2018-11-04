@@ -1,6 +1,9 @@
 
 [build]
-
+functions = "./gatsby-site/functions-build"
 base = "./gatsby-site"
 publish = "./gatsby-site/build"
 command = "yarn build"
+
+[template.environment]
+  FAUNADB_SERVER_SECRET = "Your FaunaDB Server Secret"
