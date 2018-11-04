@@ -2,7 +2,7 @@
 [build]
 functions = "./gatsby-site/functions-build"
 base = "./gatsby-site"
-publish = "./gatsby-site/build"
+publish = "./gatsby-site/gatsby-build"
 command = "gatsby build"
 
 [template.environment]
