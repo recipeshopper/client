@@ -18,8 +18,7 @@ const initialState = {
 { amount: 1,
   ingredient: 'vanilla extract',
   unit: 'tablespoon' },
-{ amount: 3, ingredient: 'egg' },
-{ amount: 2, ingredient: 'egg yolk' },
+{ amount: 5, ingredient: 'eggs' },
 { amount: 1,
   ingredient: 'semisweet chocolate chips',
   unit: 'cups' } ] }
