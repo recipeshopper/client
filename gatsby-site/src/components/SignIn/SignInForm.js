@@ -37,10 +37,10 @@ class SignInForm extends Component {
     return (
       <SignInWrapper>
         <Form signIn='true' onSubmit={this.handleSubmit}>
-        <h2>
+        <SubHeader>
           {this.props.newUser ? 'Welcome! Please create a username and password' : 'Welcome back! Please login'}
         </SubHeader>
-          <Input
+        <Input
           type='text'
           name='username'
           placeholder='username'

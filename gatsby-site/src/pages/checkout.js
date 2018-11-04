@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { Header } from '../components/styledComponents';
 
 
 const Checkout = () => (
 <div>
-    <h1>We're checkin' you out</h1>
+    <Header>We're checkin' you out</Header>
 </div>
 )
 
