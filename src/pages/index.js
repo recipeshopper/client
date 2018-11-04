@@ -1,19 +1,58 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { SignInLanding, SignInForm } from '../components/SignIn';
+import { PrivateRoute } from 'gatsby';
+import { login, signUp } from '../components/actions/actions';
+import { connect } from 'react-redux';
+import axios from 'axios';
 
-import Layout from '../components/layout'
-import Image from '../components/image'
+class IndexPage extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      newUser: false,
+      returningUser: false,
+    }
+  }
 
-const IndexPage = () => (
-  <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+  signUpClickHandler = () => {
+    this.setState({
+      newUser: true,
+    })
+  }
 
-export default IndexPage
+  loginClickHandler = () => {
+    this.setState({
+      returningUser: true,
+    });
+  }
+
+
+
+  render(){
+    if (this.props.isLoggedIn){
+      console.log(this.props);
+      this.props.navigate('/list'); 
+    }
+    return (
+      <div className='wrapper'>
+        { (!this.props.isLoggedIn && !this.state.newUser && !this.state.returningUser) ?
+          <SignInLanding signupClick={this.signUpClickHandler} loginClick={this.loginClickHandler}/>
+        : null }
+      { (this.state.newUser || this.state.returningUser) ?
+        <SignInForm newUser={this.state.newUser} login={this.props.login} signUp={this.props.signUp}/> : null }
+      </div>
+    )
+  }
+
+};
+
+const mapStateToProps = state => {
+  return {
+    isLoggedIn: state.isLoggedIn,
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  { login, signUp }
+)(IndexPage);
