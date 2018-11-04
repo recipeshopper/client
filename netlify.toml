@@ -2,5 +2,5 @@
 [build]
 
 base = "./gatsby-site"
-publish = "./gatsby-site/build"
-command = "yarn build"
+publish = "./gatsby-site/public"
+command = "gatsby-build"
