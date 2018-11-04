@@ -34,7 +34,7 @@ export const quantityUpdate = (ingredient, quantity) => {
 
 export const login = (username, password) => {
   axios
-    .post('https://recipeshopperdb.herokuapp.com/login', { username, password })
+    .put('https://recipeshopperdb.herokuapp.com/login', { username, password })
     .then(response => {
       console.log(response.data);
     })
