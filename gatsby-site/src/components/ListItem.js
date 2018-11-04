@@ -12,7 +12,7 @@ const ListItem = (props) => {
             <Wrapper>
                 <Form>
                     <Label>
-                    <Input list='true' type="number" defaultValue={props.amount}></Input>
+                    <Input list='true' type="number" defaultValue={props.amount} onChange={input}></Input>
                     {props.ingredient}
                     <DeleteSpan onClick={props.deleter}>X</DeleteSpan>
                     </Label>
