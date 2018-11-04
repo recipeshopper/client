@@ -1,6 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { Form, Input, Label, DeleteSpan, Wrapper } from './styledComponents';
+import { Form, Input } from './styledComponents';
 
 const ListItem = (props) => {
     const input = (e) => {
@@ -9,15 +8,16 @@ const ListItem = (props) => {
     }
 
         return(
-            <Wrapper>
+            <div>
                 <Form>
-                    <Label>
-                    <Input list='true' type="number" defaultValue={props.amount} onChange={input}></Input>
+                    <label>
+                    <Input type="number" defaultValue={props.amount} onChange={input}></Input>
                     {props.ingredient}
-                    <DeleteSpan onClick={props.deleter}>X</DeleteSpan>
-                    </Label>
+                    <h2>current state: {props.amount}</h2>
+                    <span onClick={props.delete}>X</span>
+                    </label>
                 </Form>
-            </Wrapper>
+            </div>
         )
     }
 

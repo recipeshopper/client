@@ -22,21 +22,26 @@ class AddForm extends React.Component{
     submit = (e) => {
         e.preventDefault();
         this.props.addItem(this.state.ingredient, this.state.amount, this.state.unit);
+        this.setState({
+          ingredient: '',
+          amount: '',
+          unit: '',
+        })
     }
 
     render(){
         return(
             <form onSubmit={this.submit} >
                 <label> Ingredient
-                    <input onChange={this.handleChange} name="ingredient" type="text" placeholder="ingredient">
+                    <input onChange={this.handleChange} name="ingredient" type="text" placeholder="ingredient" value={this.state.ingredient}>
                     </input>
                 </label>
                 <label>Amount
-                    <input onChange={this.handleChange} name="amount" type="number">
+                    <input onChange={this.handleChange} name="amount" type="number" value={this.state.amount}>
                     </input>
                 </label>
                 <label>Unit
-                    <input onChange={this.handleChange} name="unit" type="text" placeholder="Unit">
+                    <input onChange={this.handleChange} name="unit" type="text" placeholder="Unit" value={this.state.unit}>
                     </input>
                 </label>
                 <button>Add Item</button>
@@ -44,10 +49,10 @@ class AddForm extends React.Component{
         )
         }
     }
-    
+
 const mapStateToProps = (state) => {
     return {
-        groceries: state.groceries 
+        groceries: state.groceries
     }
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import ListItem from '../components/ListItem';
 import { connect } from 'react-redux';
-import { deleter, quantityUpdate } from '../components/actions/actions'
+import {deleter, quantityUpdate } from '../components/actions/actions'
 import AddForm from '../components/AddForm';
 
 
@@ -15,9 +15,9 @@ class ReviewList extends React.Component{
     }
 
     inputHandler = (ingredient, value) => {
-        this.setState(() => ({
+        this.setState({
             quantity: value
-        }))
+        }, function(){console.log('new', this.state.quantity)})
         this.props.quantityUpdate(ingredient, value);
     }
 
