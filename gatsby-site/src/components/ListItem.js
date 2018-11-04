@@ -1,16 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { connect } from 'react-redux';
+import { Form, Input } from './styledComponents';
 
 const ListItem = (props) => {
         return(
             <div>
-                <li>
-                    <input type='number'>{props.quantity}</input>
-                    
-                </li>
+                <Form> 
+                    <label> 
+                    <Input type="number" defaultValue={props.amount}></Input>
+                    {props.ingredient}
+                    <span onClick={props.deleter}>X</span>
+                    </label>
+                </Form>
             </div>
         )
     }
-    
-//map the groceries array, each item.item is the <p> and item.quantity is the auto fill of the input
 
-export default ListItem;
+    export default ListItem;

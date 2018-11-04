@@ -12,7 +12,12 @@
     "gatsby-plugin-sharp": "^2.0.7",
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-transformer-sharp": "^2.1.4",
+<<<<<<< HEAD
   
+=======
+    "ingredients-parser": "^1.4.0",
+    "react": "^16.5.1",
+>>>>>>> 8bbfba6babd7b48c5c5dc53eaa8b8666f65e8779
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-redux": "^5.1.0",
