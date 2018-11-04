@@ -33,15 +33,15 @@ class AddForm extends React.Component{
     render(){
         return(
             <Form onSubmit={this.submit} add='true' >
-                <Label add='true'> Ingredient
+                <Label > Ingredient
                     <Input onChange={this.handleChange} name="ingredient" type="text" placeholder="ingredient" value={this.state.ingredient}>
                     </Input>
                 </Label>
-                <Label add='true'>Amount
+                <Label>Amount
                     <Input onChange={this.handleChange} name="amount" type="number" value={this.state.amount}>
                     </Input>
                 </Label>
-                <Label add='true'>Unit
+                <Label >Unit
                     <Input onChange={this.handleChange} name="unit" type="text" placeholder="Unit" value={this.state.unit}>
                     </Input>
                 </Label>
