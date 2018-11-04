@@ -1,21 +1,24 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
 import { Link } from 'gatsby'
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import { App } from './App';
-import { reducer } from '../components/reducers/reducer';
 
-import Layout from '../components/layout'
-import Image from '../components/image'
+class IndexPage extends React.Component{
+  constructor(){
+    super();
+    this.state={
+      groceries: []
+    }
+  }
 
-const store = createStore(
-  reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
+  render(){
+    return(
+      <div>
+          <h1>Get your groceries</h1>
+          <Link to="/list">Login</Link>
+      </div>
+    )
+  }
+}
 
-ReactDOM.render(
-<Provider store={store}>
-    <App />
-</Provider>, document.getElementById('root')
-)
+
+
+export default IndexPage;
