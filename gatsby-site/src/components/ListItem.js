@@ -1,16 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { connect } from 'react-redux';
 
 const ListItem = (props) => {
         return(
             <div>
-                <li>
-                    <input type='number'>{props.quantity}</input>
-                    
-                </li>
+                <div>
+                    <input type='number'>{props.amount}</input>
+                    <p>{props.ingredient}</p>
+                    HI
+                </div>
+                <p onClick={props.deleter}>X</p>
             </div>
         )
     }
-    
-//map the groceries array, each item.item is the <p> and item.quantity is the auto fill of the input
 
-export default ListItem;
+    export default ListItem;
