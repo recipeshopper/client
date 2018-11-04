@@ -26,8 +26,8 @@ text-align: center;
 
 export const SignInWrapper = styled.div `
   background: #3AAFA9;
-  height: 100vh;
   color: #02172c;
+  height: 100vh;
   margin-top: 30px;
   width: 100%;
   display: flex;
@@ -63,7 +63,6 @@ border: 2px solid #335461;
 margin: 3%;
 padding: 10px;
 background-color: rgb(228, 228, 228);
-
 &:focus {
   outline: none;
 }
@@ -78,7 +77,6 @@ export const Label = styled.label `
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-
   &:hover{
     background: #349C97;
   }
@@ -93,7 +91,6 @@ export const AddLabel = styled.label `
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-
   &:hover{
     background: #349C97;
   }
@@ -124,7 +121,6 @@ export const DeleteSpan = styled.span `
   margin-left: 5%;
   cursor: pointer;
   color: #02172c;
-
   &:hover {
     color: white;
   }
