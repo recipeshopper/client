@@ -204,6 +204,7 @@ html {
 }
 body {
   color: #02172c;
+  background: #3AAFA9;
   font-family: 'Fredoka One', cursive;
   font-weight: bold;
   word-wrap: break-word;
@@ -626,4 +627,10 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.shopper-logo{
+  display: block;
+margin: 0 auto;
+margin-top: 50px;
 }

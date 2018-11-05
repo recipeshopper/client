@@ -8,10 +8,18 @@ export const Header = styled.h1 `
   padding-top: 40px;
 `;
 
-export const SubHeader = styled.h3 `
+export const ListSubHeader = styled.h3 `
   text-align: left;
   margin: 0 auto; 
   margin-left: 15%;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  font-size: 30px;
+`;
+
+export const SubHeader = styled.h3 `
+  text-align: center;
+  margin: 0 auto; 
   padding-top: 70px;
   padding-bottom: 20px;
   font-size: 30px;
@@ -24,9 +32,16 @@ width: 100%;
 text-align: center;
 `;
 
+export const FauxWrapper = styled.div `
+margin: 0 auto;
+margin-bottom: -30px;
+width: 100%;
+`;
+
 export const SignInWrapper = styled.div `
   background: #3AAFA9;
   color: #02172c;
+  height: 100vh;
   margin-top: 30px;
   width: 100%;
   display: flex;
@@ -62,7 +77,6 @@ border: 2px solid #335461;
 margin: 3%;
 padding: 10px;
 background-color: rgb(228, 228, 228);
-
 &:focus {
   outline: none;
 }
@@ -77,7 +91,6 @@ export const Label = styled.label `
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-
   &:hover{
     background: #349C97;
   }
@@ -92,7 +105,6 @@ export const AddLabel = styled.label `
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-
   &:hover{
     background: #349C97;
   }
@@ -123,7 +135,6 @@ export const DeleteSpan = styled.span `
   margin-left: 5%;
   cursor: pointer;
   color: #02172c;
-
   &:hover {
     color: white;
   }
